@@ -7,6 +7,9 @@ Android application that makes use of the new notification access in Android 4.3
 
 I wanted a Watchface, not a Watchapp, because I wanted to be able to have the face be usable as a home screen and I didn't need any user interaction. I also wanted to play with the new Andoird 4.3+ general notification access. This is a very simple Watchface.
 
+Download APK
+============
+
 The precompiled APK is [available](https://dl.dropboxusercontent.com/u/4373155/Pebble/PebbleNotifier-v1.0.apk).
 
 Known Issues
