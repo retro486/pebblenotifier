@@ -1,8 +1,5 @@
 package us.rdkl.pebblenotifier;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 import com.getpebble.android.kit.PebbleKit;
 import com.getpebble.android.kit.util.PebbleDictionary;
 

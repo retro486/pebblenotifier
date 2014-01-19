@@ -3,7 +3,7 @@
 
     <string name="app_name">PebbleNotifier</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="service_name">All</string>
+    <string name="service_name">All notifications</string>
+    <string name="watch_app_install_failed">Unable to push Notification Face to your Pebble.</string>
 
 </resources>

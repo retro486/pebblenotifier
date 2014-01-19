@@ -8,12 +8,49 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/notification_face_ss" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_marginBottom="31dp"
+        android:onClick="installWatchface"
+        android:text="Install WatchFace" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="In order for this app to send notifications to your Pebble, you will need to allow it access to ALL notifications. Under Security settings, enable PN in Notification access. Tap the button below to open your Security settings to do so now."
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:onClick="launchNotificationPreferences"
+        android:text="Open Security Preferences" />
+
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="19dp"
         android:onClick="sendMessage"
         android:text="Send Test Notification" />
 
