@@ -1,6 +1,8 @@
 PebbleNotifier
 ==============
 
+![](https://raw.github.com/retro486/pebblenotifier/master/res/drawable-hdpi/notification_face_ss.png)
+
 Android application that makes use of the new notification access in Android 4.3+ to push ALL notifications to the Pebble watch as a Watchface instead of a Watchapp.
 
 I wanted a Watchface, not a Watchapp, because I wanted to be able to have the face be usable as a home screen and I didn't need any user interaction. I also wanted to play with the new Andoird 4.3+ general notification access. This is a very simple Watchface.
