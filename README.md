@@ -26,3 +26,5 @@ Known Issues
 * Any notifications that you enable in the native Pebble notifications on your watch will override the Pebble Notifier Watchface. For example, if a phone call is triggered and you have "Incoming Calls" enabled in your Pebble app, the watch face will not update. For best results, disable all the notification options in the Pebble app.
 
 * Because this app intercepts all notifications, none of the notifications will appear in the Pebble's "Notifications" menu item.
+
+* Cycling though watchfaces will clear the notification area. Not so much an issue as I think it's a good way to clear it out quickly to switch to another face then back.
