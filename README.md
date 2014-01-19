@@ -14,6 +14,11 @@ The precompiled APK is [available](https://dl.dropboxusercontent.com/u/4373155/P
 
 ![](http://zxing.org/w/chart?cht=qr&chs=230x230&chld=L&choe=UTF-8&chl=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F4373155%2FPebble%2FPebbleNotifier-v1.0.apk)
 
+Watchface Code
+==============
+
+The watchface code can be found on the [Notification Face](https://github.com/retro486/notification_face) Github.
+
 Known Issues
 ============
 
