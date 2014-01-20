@@ -19,7 +19,16 @@ public class NotificationListener extends NotificationListenerService {
 
 	@Override
 	public void onNotificationPosted(StatusBarNotification sbn) {
-		sendMessage(sbn.getNotification().tickerText.toString());
+		NotificationSourceTracker nst = new NotificationSourceTracker(sbn.getPackageName());
+		int i = NotificationFilter.notification_history.indexOf(nst);
+		if(i == -1) {
+			NotificationFilter.notification_history.add(nst);
+		}
+		else {
+			if(NotificationFilter.notification_history.get(i).isVisible()) {
+				sendMessage(sbn.getNotification().tickerText.toString());
+			}
+		}
 	}
 
 	@Override

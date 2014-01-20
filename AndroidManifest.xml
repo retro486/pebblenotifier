@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="us.rdkl.pebblenotifier"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.1" >
 
     <uses-sdk
         android:minSdkVersion="18"
@@ -31,6 +31,8 @@
                 <action android:name="android.service.notification.NotificationListenerService" />
             </intent-filter>
         </service>
+        <activity android:name="us.rdkl.pebblenotifier.NotificationFilter" android:label="@string/manage_notification_visibility">
+        </activity>
     </application>
 
 </manifest>
