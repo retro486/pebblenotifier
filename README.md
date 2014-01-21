@@ -10,7 +10,7 @@ I wanted a Watchface, not a Watchapp, because I wanted to be able to have the fa
 Download APK
 ============
 
-The precompiled APK is [available](https://dl.dropboxusercontent.com/u/4373155/Pebble/PebbleNotifier-v1.0.apk).
+The precompiled v1.2 APK is [available](https://dl.dropboxusercontent.com/u/4373155/Pebble/PebbleNotifier-v1.2.apk)
 
 ![](http://zxing.org/w/chart?cht=qr&chs=230x230&chld=L&choe=UTF-8&chl=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F4373155%2FPebble%2FPebbleNotifier-v1.0.apk)
 
