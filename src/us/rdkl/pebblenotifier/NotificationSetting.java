@@ -1,11 +1,11 @@
 package us.rdkl.pebblenotifier;
 
-public class NotificationSourceTracker {
+public class NotificationSetting {
 	private boolean visible;
 	private String package_name;
 	
-	public NotificationSourceTracker(String sbn) {
-		this.visible = true;
+	public NotificationSetting(String sbn, boolean state) {
+		this.visible = state;
 		this.package_name = sbn;
 	}
 	
@@ -27,7 +27,7 @@ public class NotificationSourceTracker {
 	
 	@Override
 	public boolean equals(Object o) {
-		return ((NotificationSourceTracker)o).getPackageName().equals(this.getPackageName());
+		return ((NotificationSetting)o).getPackageName().equals(this.getPackageName());
 	}
 	
 	@Override

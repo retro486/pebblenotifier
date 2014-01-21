@@ -1,8 +1,5 @@
 package us.rdkl.pebblenotifier;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-
 import android.app.Activity;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -14,11 +11,14 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
 public class NotificationFilter extends Activity {
-	protected static ArrayList<NotificationSourceTracker> notification_history = new ArrayList<NotificationSourceTracker>();
+	//	protected static ArrayList<NotificationSourceTracker> notification_history = new ArrayList<NotificationSourceTracker>();
+	protected StorageHelper storage_helper;
 	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        storage_helper = new StorageHelper(getApplicationContext());
         
         LinearLayout ll = new LinearLayout(getApplicationContext());
         ll.setLayoutParams(new LinearLayout.LayoutParams(
@@ -33,19 +33,21 @@ public class NotificationFilter extends Activity {
         
         PackageManager pm = this.getPackageManager();
         
-        for(Iterator<NotificationSourceTracker> i = notification_history.iterator(); i.hasNext();) {
-        	NotificationSourceTracker nst = i.next();
-        	CheckBox cb = new CheckBox(getApplicationContext());
-        	cb.setChecked(nst.isVisible());
+        for(NotificationSetting ns : storage_helper.getAllStates()) {
+        	ApplicationInfo ai;
         	try {
-        		ApplicationInfo ai = pm.getApplicationInfo(nst.getPackageName(), PackageManager.GET_META_DATA);
-        		cb.setText(pm.getApplicationLabel(ai));
+        		 ai = pm.getApplicationInfo(ns.getPackageName(), PackageManager.GET_META_DATA);
         	}
         	catch(PackageManager.NameNotFoundException ex) {
         		// app may be uninstalled -- should remove it
-        		notification_history.remove(nst);
+        		storage_helper.deleteAppSetting(ns.getPackageName());
+        		continue;
         	}
-        	CheckChangedListener listener = new CheckChangedListener(notification_history.indexOf(nst));
+        	
+        	CheckBox cb = new CheckBox(getApplicationContext());
+        	cb.setChecked(ns.isVisible());
+        	cb.setText(pm.getApplicationLabel(ai));
+        	CheckChangedListener listener = new CheckChangedListener(getApplicationContext(), ns.getPackageName());
         	cb.setOnCheckedChangeListener(listener);
         	cb.setTextColor(Color.BLACK);
         	cb.setTextSize(TypedValue.COMPLEX_UNIT_SP, (float)16.0);
