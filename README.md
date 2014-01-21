@@ -7,6 +7,8 @@ Android application that makes use of the new notification access in Android 4.3
 
 I wanted a Watchface, not a Watchapp, because I wanted to be able to have the face be usable as a home screen and I didn't need any user interaction. I also wanted to play with the new Andoird 4.3+ general notification access. This is a very simple Watchface.
 
+You can disable apps that have sent notifications in the Manage Notifications menu item. Checked items will push notifications; unchecked will not. Note that at least one notification needs to have come through before the app will appear in this list.
+
 Download APK
 ============
 
@@ -25,8 +27,6 @@ Known Issues
 * This app and Watchface are only tested on beta 2.0 firmware and Pebble app versions. I'm not sure if they'll work in 1.x firmware/Pebble app but I'm pretty sure it doesn't use any 2.0-specific features (such as the AccelerometerService).
 
 * This app is untested in Android KitKat 4.4 but it should work without issue.
-
-* When I say ALL notifications, I mean it. If it shows up in the Android notification bar, it'll buzz on your wrist. This includes "Wifi found" and software update messages, but this was the point of this app. The trade-off is that you don't need to specify which apps you want to listen to though I may add it in the future.
 
 * Any notifications that you enable in the native Pebble notifications on your watch will override the Pebble Notifier Watchface. For example, if a phone call is triggered and you have "Incoming Calls" enabled in your Pebble app, the watch face will not update. For best results, disable all the notification options in the Pebble app.
 
