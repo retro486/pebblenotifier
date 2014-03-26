@@ -1,4 +1,4 @@
-PebbleNotifier
+Pebble Notify
 ==============
 
 ![](https://raw.github.com/retro486/pebblenotifier/master/res/drawable-hdpi/notification_face_ss.png)
