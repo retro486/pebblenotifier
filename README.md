@@ -1,6 +1,8 @@
 Pebble Notify
 ==============
 
+*NOTE:* This app is effectively abandoned as I no longer own a Pebble watch. Support will not be offered and the app on the appstore has been made free of charge.
+
 ![](https://raw.github.com/retro486/pebblenotifier/master/res/drawable-hdpi/notification_face_ss.png)
 
 Android application that makes use of the new notification access in Android 4.3+ to push ALL notifications to the Pebble watch as a Watchface instead of a Watchapp.
